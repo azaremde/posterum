@@ -1,0 +1,14 @@
+@media (max-width: 1440px)
+    .tasks
+        margin-bottom: 150px
+        .container
+            .hidden
+                &:first-child
+                    transform: translateX(-200%) scale(0.9)
+                &:last-child
+                    transform: translateX(200%) scale(0.9)
+            .visible
+                &:first-child, &:last-child
+                    transform: translateX(0)
+            .solution
+                transform: scale(0.9)

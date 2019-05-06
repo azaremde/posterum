@@ -1,0 +1,108 @@
+.tasks
+    margin-top: 180px
+    margin-bottom: 235px
+    position: relative
+    .arrow
+        &--type-1
+            top: 170%
+        &--type-2
+            top: -53%
+    .container
+        .solutions
+            display: flex
+            justify-content: space-between
+        .tasks__title
+            font-size: 30px
+        .hidden
+            &:first-child
+                transform: translateX(-200%)
+            &:last-child
+                transform: translateX(200%)
+        .visible
+            &:first-child, &:last-child
+                transform: translateX(0)
+        .solution
+            margin-top: 37px
+            width: 570px
+            &:first-child
+                .top
+                    background-image: linear-gradient(59deg, #102d63 0%, #174089 100%)
+            &:last-child
+                .top
+                    background-image: linear-gradient(59deg, #fc283c 0%, #ff3c4d 100%)
+                .bottom
+                    .option
+                        .left-side
+                            .check
+                                border: 1px solid $red
+                                &::after
+                                    background-color: $red
+                            .description
+                                &__title
+                                    color: $red
+                        &__price
+                            color: $red
+            .top
+                padding: 35px 0
+                text-align: center
+                &__title
+                    font-size: 27px
+            .bottom
+                background-color: #fff
+                padding: 35px
+                display: flex
+                flex-direction: column
+                .option
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    margin-bottom: 34px
+                    cursor: pointer
+                    .left-side
+                        display: flex
+                        align-items: center
+                        .check
+                            width: 20px
+                            height: 20px
+                            border: 1px solid #174089
+                            position: relative
+                        .description
+                            margin-left: 20px
+                            &__title
+                                font-size: 25px
+                                +radio-regular
+                                color: #164088
+                            &__subtitle
+                                font-size: 16px
+                                color: #333333
+                                margin: 0
+                    &--active
+                        .check
+                            &::after
+                                content: ''
+                                position: absolute
+                                width: 10px
+                                height: 10px
+                                background-color: #174089
+                                left: 4px
+                                top: 4px    
+                    &--hovered
+                        .check
+                            background-color: rgba(0, 0, 0, 0.05)
+                    &__price
+                        color: #164089
+                        font-size: 36px
+                        +black
+                    .value
+                        color: black
+                        font-size: 18px
+                        margin-left: 5px
+                        +medium
+                &__button
+                    align-self: center
+                    padding: 23px 63px
+                    &--blue
+                        border: 1px solid #174089
+                        background-color: #174089
+                        color: white
+                        &:hover

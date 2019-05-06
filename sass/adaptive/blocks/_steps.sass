@@ -1,0 +1,56 @@
+@media (max-width: 1440px)
+    .steps
+        .container
+            .steps__title
+            .iron-man
+                max-height: 650px
+                .hidden
+                    transition: 1s
+                    transform: scale(0.2) translateY(120%)
+                .visible
+                    transform: scale(0.5) translateY(20%)
+                &__image
+                    margin: 0 auto
+                    transform-origin: 50% 0
+                .steps-row
+                    &--1
+                        top: 50px
+                        left: 40px
+                        width: 1104px
+                        .step
+                            &:nth-child(1)
+                                &::before, &::after
+                                    left: 240px
+                                    top: 75px
+                            &:nth-child(2)
+                                &::before, &::after
+                                    left: -50px
+                                    top: 80px
+                    &--2
+                        top: 260px
+                        width: 1168px
+                        .step
+                            &:nth-child(1)
+                                &::before, &::after
+                                    left: 260px
+                                    top: 75px
+                            &:nth-child(2)
+                                &::before, &::after
+                                    left: -50px
+                                    top: 70px
+                    &--3
+                        top: 490px
+                        left: 40px
+                        width: 1104px
+                        .step
+                            &:nth-child(1)
+                                &::before, &::after
+                                    left: 200px
+                                    top: 0
+                            &:nth-child(2)
+                                &::before, &::after
+                                    left: -80px
+                                    top: 10px
+                    .step
+                        &__title
+                            transform: scale(0.7)

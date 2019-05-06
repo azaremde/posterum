@@ -3,33 +3,588 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Jura:300,500,700|Russo+One" rel="stylesheet">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js"></script>
-    <script src="js/script.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Posterum</title>
 </head>
 <body>
-    <header class="header screen">        
+    <header class="header" id="header-anchor">
+            <img src="images/double-arrow.png" alt="" class="arrow arrow--type-1">
         <div class="container">
-            <div class="left-part">
-                <h1 class="left-part__title">Нужен презентабельный сайт?</h1>
-                <p class="left-part__subtitle">Сделаем.</p>
+            <div class="upper-part">
+                <a href=# class="logo">
+                    <img src="images/header/logo.png" alt="" class="logo__image">
+                </a>
+                <nav class="nav">
+                    <a href="#" class="nav__link link">Портфолио</a>
+                    <a href="#" class="nav__link link">Услуги</a>
+                    <a href="#" class="nav__link link">О компании</a>
+                    <a href="#" class="nav__link link">Контакты</a>
+                </nav>
+                <div class="contacts">
+                    <span class="contacts__phone">+375 (17) 388-72-77</span>
+                    <a href="#" class="contacts__call">Заказать обратный звонок</a>
+                </div>
             </div>
-            <div class="right-part">
-                <h3 class="right-part__plus">Огромный опыт разработки.</h3>
-                <h3 class="right-part__plus">Использование только лучших инструментов</h3>
-                <h3 class="right-part__plus">Чистый код</h3>
-                <h3 class="right-part__plus">Кратчайшие сроки</h3>
-                <h3 class="right-part__plus">Один человек</h3>
+            <div class="lower-part">
+                <div class="left-part toFadeIn">
+                    <div class="text">
+                        <h1 class="text__title">
+                            <span class="red-text">Создаем</span><br> не просто сайты
+                        </h1>
+                        <h3 class="text__subtitle">
+                            А работающий инструмент для привлечения клиентов
+                        </h3>
+                    </div>
+                    <div class="buttons">
+                        <a href=# class="buttons__button button">
+                            Обсудить ваш проект
+                        </a>
+                        <a href=# class="buttons__button button">
+                            Посмотреть работы
+                        </a>
+                    </div>
+                    <div class="social-container">
+                        <a href="#" class="social-link">
+                            <img src="images/header/vk.png" alt="" class="social-link__image">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="images/header/insta.png" alt="" class="social-link__image">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="images/header/bh.png" alt="" class="social-link__image">
+                        </a>
+                    </div>
+                </div>
+                <div class="right-part toFadeIn">
+                    <div class="labtop">
+                        <div class="labtop__stripe"></div>
+                        <img src="images/header/MacBook_Silver.png" alt="" class="labtop__image">
+                        <img src="images/header/screen_CHANGE_THIS.png" alt="" class="labtop__screen">
+                        <div class="all-dotes">
+                            <div class="dotes">
+                                <img src="images/header/dotes-1.png" alt="" class="dot">
+                            </div>
+                            <div class="dotes">
+                                <img src="images/header/dotes-2.png" alt="" class="dot">
+                            </div>
+                            <div class="dotes">
+                                <img src="images/header/dotes-3.png" alt="" class="dot">
+                            </div>
+                        </div>
+                        <img src="images/header/Shadow.png" alt="" class="labtop__shadow">
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-    <main style="background-color: black" class="screen">
-
+    <main class="main">
+        <div class="products">
+            <img src="images/double-arrow.png" alt="" class="arrow arrow--type-2">
+            <img src="images/double-arrow.png" alt="" class="arrow arrow--type-1">
+            <div class="container">
+                <h2 class="products__title">Наши <span class="red-text">работы</span></h2>
+                <div class="buttons">
+                    <button id="gallery-button-1" class="buttons__button gallery-button gallery-button--active button">Landing-page</button>
+                    <button id="gallery-button-2" class="buttons__button gallery-button button">Сайт-визитка</button>
+                    <button id="gallery-button-3" class="buttons__button gallery-button button">Интернет-магазин</button>
+                    <button id="gallery-button-4" class="buttons__button gallery-button button">Каталог</button>
+                </div>
+                <div class="gallery">
+                    <div class="product toFadeIn">
+                        <div class="product__image product__image--slide-1"></div>
+                        <h3 class="product__title product__title--slide-1">Сайт для стоматологии</h3>
+                        <div class="product__image product__image--slide-2"></div>
+                        <h3 class="product__title product__title--slide-2">САЙТ-ВИЗИТКА ИЗОБРАЖЕНИЕ-1</h3>
+                        <div class="product__image product__image--slide-3"></div>
+                        <h3 class="product__title product__title--slide-3">ИНТЕРНЕТ-МАГАЗИН ИЗОБРАЖЕНИЕ-1</h3>
+                        <div class="product__image product__image--slide-4"></div>
+                        <h3 class="product__title product__title--slide-4">КАТАЛОГ ИЗОБРАЖЕНИЕ-1</h3>
+                    </div>
+                    <div class="product toFadeIn">
+                        <div class="product__image product__image--slide-1"></div>
+                        <h3 class="product__title product__title--slide-1">Сайт для строительной компании</h3>
+                        <div class="product__image product__image--slide-2"></div>
+                        <h3 class="product__title product__title--slide-2">САЙТ-ВИЗИТКА ИЗОБРАЖЕНИЕ-2</h3>
+                        <div class="product__image product__image--slide-3"></div>
+                        <h3 class="product__title product__title--slide-3">ИНТЕРНЕТ-МАГАЗИН ИЗОБРАЖЕНИЕ-2</h3>
+                        <div class="product__image product__image--slide-4"></div>
+                        <h3 class="product__title product__title--slide-4">КАТАЛОГ ИЗОБРАЖЕНИЕ-2</h3>
+                    </div>
+                    <div class="product toFadeIn">
+                        <div class="product__image product__image--slide-1"></div>
+                        <h3 class="product__title product__title--slide-1">Сайт для кофейного магазина</h3>
+                        <div class="product__image product__image--slide-2"></div>
+                        <h3 class="product__title product__title--slide-2">САЙТ-ВИЗИТКА ИЗОБРАЖЕНИЕ-3</h3>
+                        <div class="product__image product__image--slide-3"></div>
+                        <h3 class="product__title product__title--slide-3">ИНТЕРНЕТ-МАГАЗИН ИЗОБРАЖЕНИЕ-3</h3>
+                        <div class="product__image product__image--slide-4"></div>
+                        <h3 class="product__title product__title--slide-4">КАТАЛОГ ИЗОБРАЖЕНИЕ-4</h3>
+                    </div>
+                </div>
+                <a href=# class="bottom-button button">Открыть больше кейсов</a>
+            </div>
+        </div>
+        <section class="section">
+            <div class="pluses">
+                <div class="container">
+                    <h2 class="pluses__title">Почему наши сайты <span class="red-text">эффективны?</span></h2>
+                    <div class="inner-container">
+                        <div class="row toFadeIn">
+                            <div class="plus">
+                                <img src="images/pluses/plus-1.png" alt="" class="plus-text__image">
+                                <div class="plus-text">
+                                    <h3 class="plus-text__title">УНИКАЛЬНЫЙ UI/UX-ДИЗАЙН</h3>
+                                    <p class="plus-text__description">Не только красиво, но и удобно. Грамотная организация пространства для легкости восприятия информации</p>
+                                </div>
+                            </div>
+                            <div class="plus">
+                                <img src="images/pluses/plus-2.png" alt="" class="plus-text__image">
+                                <div class="plus-text">
+                                    <h3 class="plus-text__title">СОВРЕМННЫЙ И БЫСТРЫЙ ПРОДУКТ</h3>
+                                    <p class="plus-text__description">Сайт продает уже через неделю после запуска</p>
+                                </div>
+                            </div>
+                            <div class="plus">
+                                <img src="images/pluses/plus-3.png" alt="" class="plus-text__image">
+                                <div class="plus-text">
+                                    <h3 class="plus-text__title">ТЕХНИЧЕСКАЯ ПОДДЕРЖКА ПОСЛЕ СДАЧИ ПРОЕКТА</h3>
+                                    <p class="plus-text__description">Мы не оставим вас один на один после сдачи проекта</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row toFadeIn">
+                            <div class="plus">
+                                <img src="images/pluses/plus-4.png" alt="" class="plus-text__image">
+                                <div class="plus-text">
+                                    <h3 class="plus-text__title">ПРОДАЮЩИЕ ТЕКСТЫ</h3>
+                                    <p class="plus-text__description">Цепляющие заголовки и текст, нацеленный на ЦА.</p>
+                                </div>
+                            </div>
+                            <div class="plus">
+                                <img src="images/pluses/plus-5.png" alt="" class="plus-text__image">
+                                <div class="plus-text">
+                                    <h3 class="plus-text__title">АДАПТИВНОСТЬ НА ВСЕХ УСТРОЙСТВАХ</h3>
+                                    <p class="plus-text__description">Сайт корректно работает в любом браузере и на любом устройстве</p>
+                                </div>
+                            </div>
+                            <div class="plus">
+                                <img src="images/pluses/plus-6.png" alt="" class="plus-text__image">
+                                <div class="plus-text">
+                                    <h3 class="plus-text__title">ОПТИМИЗИРОВАННЫЙ ДЛЯ ПРОДВИЖЕНИЯ САЙТ</h3>
+                                    <p class="plus-text__description">Никаких преград для SEO или контекстной рекламы</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="steps">
+            <img src="images/double-arrow.png" alt="" class="arrow arrow--type-1">
+            <img src="images/double-arrow.png" alt="" class="arrow arrow--type-2">
+            <div class="container">
+                <h2 class="steps__title">Этапы <span class="red-text">разработки сайтов</span></h2>
+                <div class="iron-man">
+                    <img src="images/steps/iron-man.png" alt="" class="iron-man__image toFadeIn">
+                    <div class="steps-row steps-row--1">
+                        <div class="step toFadeIn">
+                            <h1 class="step__title">1</h1>
+                            <span class="step__subtitle">Подготовка пробного<br>бесплатного прототипа</span>
+                        </div>
+                        <div class="step toFadeIn">
+                            <h1 class="step__title">2</h1>
+                            <span class="step__subtitle">Разработка индивидуального дизайна</span>
+                        </div>
+                    </div>
+                    <div class="steps-row steps-row--2">
+                        <div class="step toFadeIn">
+                            <h1 class="step__title">3</h1>
+                            <span class="step__subtitle">Размещение на домене<br>и хостинге</span>
+                        </div>
+                        <div class="step toFadeIn">
+                            <h1 class="step__title">4</h1>
+                            <span class="step__subtitle">Подключение сервисов (синхронизация и обмен<br>данными с сайта)</span>
+                        </div>
+                    </div>
+                    <div class="steps-row steps-row--3">
+                        <div class="step toFadeIn">
+                            <h1 class="step__title">5</h1>
+                            <span class="step__subtitle">Тестирование сайта</span>
+                        </div>
+                        <div class="step toFadeIn">
+                            <h1 class="step__title">6</h1>
+                            <span class="step__subtitle">Мониторинг и техническая поддержка проекта после  запуска</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-us">
+            <div class="container">
+                <div class="left-part">
+                    <h1 class="left-part__title">О нашей <span class="red-text">компании</span></h1>
+                    <p class="left-part__description">Наша цель - найти идеальное решение для вашего бизнеса в реальные сроки за разумные деньги</p>
+                    <div class="squares">
+                        <div class="row toFadeIn">
+                            <div class="square">
+                              <div class="frame">
+                                <h1 class="frame__title">ТОП 10</h1>
+                                <p class="frame__subtitle">В рейтинге разработчиков<br>Интернет-магазинов</p>
+                              </div>  
+                            </div>
+                            <div class="square">
+                                <div class="frame">
+                                    <h1 class="frame__title">7000 часов</h1>
+                                    <p class="frame__subtitle">Емкость отдела<br>разработки в месяц</p>
+                                </div>                                 
+                            </div>
+                        </div>
+                        <div class="row toFadeIn">
+                            <div class="square">
+                                <div class="frame">
+                                    <h1 class="frame__title">250+</h1>
+                                    <p class="frame__subtitle">Проектов</p>
+                                </div>                                 
+                            </div>
+                            <div class="square">
+                                <div class="frame">
+                                    <h1 class="frame__title">2016, 2017</h1>
+                                    <p class="frame__subtitle">Лидер по количеству<br>аттестованных разработчиков</p>
+                                </div>                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-part toFadeIn">
+                    <img src="images/about-us/about-us-image.png" alt="" class="right-part__image">
+                </div>
+            </div>
+        </div>
+        <div class="tasks">
+            <img src="images/double-arrow.png" alt="" class="arrow arrow--type-1">
+            <img src="images/double-arrow.png" alt="" class="arrow arrow--type-2">
+            <div class="container">
+                <h1 class="tasks__title">Что мы <span class="red-text">делаем?</span></h1>
+                <div class="solutions">
+                    <div class="solution toFadeIn">
+                        <div class="top">
+                            <h2 class="top__title">Готовое решение</h2>
+                        </div>
+                        <div class="bottom">
+                            <div class="option">
+                                <div class="left-side">
+                                    <div class="check"></div>
+                                    <div class="description">
+                                        <h3 class="description__title">landing-page</h3>
+                                        <p class="description__subtitle">От 3-х дней</p>
+                                    </div>
+                                </div>
+                                <h2 class="option__price">360<span class="value">BYN</span></h2>
+                            </div>
+                            <div class="option">
+                                <div class="left-side">
+                                    <div class="check"></div>
+                                    <div class="description">
+                                        <h3 class="description__title">Сайт-визитка</h3>
+                                        <p class="description__subtitle">От 5-х дней</p>
+                                    </div>
+                                </div>
+                                <h2 class="option__price">500<span class="value">BYN</span></h2>
+                            </div>
+                            <div class="option">
+                                <div class="left-side">
+                                    <div class="check"></div>
+                                    <div class="description">
+                                        <h3 class="description__title">Интернет-магазин</h3>
+                                        <p class="description__subtitle">От 10-х дней</p>
+                                    </div>
+                                </div>
+                                <h2 class="option__price">600<span class="value">BYN</span></h2>
+                            </div>
+                            <div class="option">
+                                <div class="left-side">
+                                    <div class="check"></div>
+                                    <div class="description">
+                                        <h3 class="description__title">Каталог</h3>
+                                        <p class="description__subtitle">От 7-х дней</p>
+                                    </div>
+                                </div>
+                                <h2 class="option__price">450<span class="value">BYN</span></h2>
+                            </div>
+                            <a href=# class="bottom__button bottom__button--blue button">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="solution toFadeIn">
+                        <div class="top">
+                            <h2 class="top__title">уникальный дизайн</h2>
+                        </div>
+                        <div class="bottom">
+                            <div class="option">
+                                <div class="left-side">
+                                    <div class="check"></div>
+                                    <div class="description">
+                                        <h3 class="description__title">landing-page</h3>
+                                        <p class="description__subtitle">От 3-х дней</p>
+                                    </div>
+                                </div>
+                                <h2 class="option__price">600<span class="value">BYN</span></h2>
+                            </div>
+                            <div class="option">
+                                <div class="left-side">
+                                    <div class="check"></div>
+                                    <div class="description">
+                                        <h3 class="description__title">Сайт-визитка</h3>
+                                        <p class="description__subtitle">От 5-х дней</p>
+                                    </div>
+                                </div>
+                                <h2 class="option__price">650<span class="value">BYN</span></h2>
+                            </div>
+                            <div class="option">
+                                <div class="left-side">
+                                    <div class="check"></div>
+                                    <div class="description">
+                                        <h3 class="description__title">Интернет-магазин</h3>
+                                        <p class="description__subtitle">От 10-х дней</p>
+                                    </div>
+                                </div>
+                                <h2 class="option__price">1 000<span class="value">BYN</span></h2>
+                            </div>
+                            <div class="option">
+                                <div class="left-side">
+                                    <div class="check"></div>
+                                    <div class="description">
+                                        <h3 class="description__title">Каталог</h3>
+                                        <p class="description__subtitle">От 7-х дней</p>
+                                    </div>
+                                </div>
+                                <h2 class="option__price">850<span class="value">BYN</span></h2>
+                            </div>
+                            <a href=# class="bottom__button button">Заказать</a>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="partners">
+                <div class="container">
+                    <h1 class="partners__title">Мы гордимся работой с <span class="red-text">лидерами рынка</span></h1>
+                    <div class="companies">
+                        <div class="row">
+                            <img src="images/partners/mts.png" alt="" class="company">
+                            <img src="images/partners/maxidom.png" alt="" class="company">
+                            <img src="images/partners/mcdonalds.png" alt="" class="company">
+                            <img src="images/partners/tele2.png" alt="" class="company">
+                            <img src="images/partners/sberbank.png" alt="" class="company">
+                            <img src="images/partners/pochta.png" alt="" class="company">
+                        </div>
+                        <div class="row">
+                            <img src="images/partners/pochta.png" alt="" class="company">
+                            <img src="images/partners/sberbank.png" alt="" class="company">
+                            <img src="images/partners/tele2.png" alt="" class="company">
+                            <img src="images/partners/mcdonalds.png" alt="" class="company">
+                            <img src="images/partners/maxidom.png" alt="" class="company">
+                            <img src="images/partners/mts.png" alt="" class="company">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="questions">
+            <img src="images/double-arrow.png" alt="" class="arrow arrow--type-2">
+            <div class="container">
+                <h1 class="question__title">Ответы на <span class="red-text">частые вопросы</span></h1>
+                <div class="questions-block">
+                    <div class="column toFadeIn">
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Админ панель для управления сайтом?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Какие сроки разработки сайта?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Техническое задание необходимо?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Что такое бриф и зачем он нужен?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Порядок и условия оплаты?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Какая CMS будет использоваться при разработке?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Как рассчитать стоимость сайта?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Вы делаете скидки при заказе нескольких сайтов?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">С чего начать сотрудничество?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                    </div>
+                    <div class="column toFadeIn">
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Админ панель для управления сайтом?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Какие сроки разработки сайта?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Техническое задание необходимо?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Что такое бриф и зачем он нужен?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Порядок и условия оплаты?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Какая CMS будет использоваться при разработке?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Как рассчитать стоимость сайта?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">Вы делаете скидки при заказе нескольких сайтов?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                        <div class="question">
+                            <div class="top">
+                                <h3 class="top__title">С чего начать сотрудничество?</h3>
+                                <button class="top__button"></button>
+                            </div>
+                            <p class="question__text">При заказе нескольких сайтов от 500 000 руб мы делаем скидку 1%, а если вы являетесь постоянным клиентом, мы делаем вам скидку целых 2%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <div class="container">
+                <h1 class="form__title">Как с нами <span class="red-text">связаться?</span></h1>
+                <div class="inner-container">
+                    <div class="left-side toFadeIn">
+                        <p class="left-side__description">Равным образом, современная методология разработки обеспечивает широкому кругу (специалистов) участие в формировании форм воздействия. А также многие известные личности, инициированные исключительно синтетически, социально-демократической анафеме.</p>
+    
+                        <p class="left-side__email-text">Нужна помощь?</p>
+                        <a href="#" class="left-side__email">posterum.pro@gmail.com</a>
+    
+                        <p class="left-side__phone-text">Нужна консультация?</p>
+                        <a href="" class="left-side__phone">+375 (29) 123-45-67</a>
+    
+                        <div class="social-container">
+                            <a href="#" class="social-link">
+                                <img src="images/form/vk.png" alt="" class="social-link__image">
+                            </a>
+                            <a href="#" class="social-link">
+                                <img src="images/form/insta.png" alt="" class="social-link__image">
+                            </a>
+                            <a href="#" class="social-link">
+                                <img src="images/form/bh.png" alt="" class="social-link__image">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <form class="right-side__form">
+                            <input placeholder="Ваше имя" type="text" class="right-side__input toFadeIn">
+                            <input placeholder="E-mail" type="text" class="right-side__input toFadeIn">
+                            <input placeholder="Ваш комментарий" type="text" class="right-side__input toFadeIn">
+                            <!--<input type="submit" value="ОТПРАВИТЬ ЗАЯВКУ" class="right-side__button button toFadeIn">-->
+                            <button class="right-side__button button toFadeIn">Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+    <footer class="footer">
+        <img src="images/bottom-arrow.png" alt="" class="arrow arrow--type-2">
+        <div class="container">
+            <a href=# class="logo">
+                <img src="images/header/logo.png" alt="" class="logo__image">
+            </a>
+            <nav class="nav">
+                <a href="#" class="nav__link link">Портфолио</a>
+                <a href="#" class="nav__link link">Услуги</a>
+                <a href="#" class="nav__link link">О компании</a>
+                <a href="#" class="nav__link link">Контакты</a>
+            </nav>
+            <button class="footer__button button">Наверх</button>
+        </div>
+    </footer>
 </body>
 </html>

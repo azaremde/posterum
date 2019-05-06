@@ -1,0 +1,61 @@
+.questions
+    margin-top: 109px
+    .container
+    &__title
+        font-size: 30px
+    .questions-block
+        margin-top: 49px
+        display: flex
+        justify-content: space-between
+        .column
+            .question
+                background-color: white
+                box-shadow: 0 3px 18px rgba(0, 0, 0, 0.5)
+                width: 570px
+                max-height: 55px
+                overflow: hidden
+                padding: 12px 15px
+                padding-bottom: 15px
+                margin-bottom: 15px
+                transition: max-height 0.5s ease-out
+                cursor: pointer
+                .top
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    &__title
+                        color: #010101
+                        font-size: 17px
+                        +light
+                    &__button
+                        width: 32px
+                        height: 32px
+                        padding: 0
+                        border-radius: 50%
+                        background-color: $red
+                        position: relative
+                        outline: none
+                        border: none
+                        transition: all 0.5s
+                        cursor: pointer
+                        &:hover
+                            background-color: darken($red, 10%)
+                        &::after
+                            content: ''
+                            position: absolute
+                            width: 10px
+                            height: 10px
+                            border-bottom: 1px solid white
+                            border-left: 1px solid white
+                            transform: translateX(-60%) translateY(-50%) rotateZ(-135deg)
+                &__text
+                    width: 480px
+                    font-size: 15px
+                    margin-bottom: 0
+                    +light
+                &--active
+                    max-height: 200px
+                    transition: max-height 0.5s ease-in
+                    .top
+                        &__button
+                            transform: rotateZ(180deg)

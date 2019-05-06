@@ -1,0 +1,72 @@
+.form
+    &__title
+        font-size: 30px
+        margin-top: 180px
+        margin-bottom: 49px
+    .container
+    .inner-container
+        display: flex
+        justify-content: space-between
+    .left-side
+        max-width: 427px
+        &__description
+            color: #e7e7e7
+            font-size: 15px
+            line-height: 22px
+            margin: 0
+            +light
+        &__email-text
+            color: #e7e7e7
+            font-size: 15px
+            line-height: 22px
+            margin: 0
+            margin-top: 44px
+            +light
+        &__email
+            color: #fefefe
+            font-size: 19px
+            text-decoration: none
+            line-height: 22px
+            +bold
+        &__phone-text
+            color: #e7e7e7
+            font-size: 15px
+            line-height: 22px
+            margin: 0
+            margin-top: 30px
+            +light
+        &__phone
+            color: #fefefe
+            font-size: 19px
+            text-decoration: none
+            line-height: 22px
+            +bold
+        .social-container
+            margin-top: 38px
+            .social-link
+                &__image
+    .right-side
+        &__form
+            display: flex
+            flex-direction: column
+            width: 670px
+        &__input
+            height: 55px
+            margin-bottom: 15px
+            background-color: #fff
+            border: 1px solid $red
+            outline: none
+            padding-left: 10px
+            font-size: 18px
+            color: black
+            +light
+            &::placeholder
+                color: $red
+                +light
+        &__input:nth-last-child(2)
+            height: 200px
+            padding-bottom: calc(200px - 3rem)
+        &__button
+            align-self: flex-start
+            padding: 20px 32px
+            max-height: 55px

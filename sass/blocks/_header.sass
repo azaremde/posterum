@@ -1,18 +1,119 @@
 .header
-    background: linear-gradient(160deg, #33CDC7 -50%, #1E1E1E 40%)
+    height: 892px
+    position: relative
     .container
-        display: flex
-        padding: 100px 0
-        justify-content: space-between
-    .left-part
-        &__title
-            color: white
-            font-size: 50px
-            max-width: 300px
-        &__subtitle
-            color: white
-            font-size: 35px
-    .right-part
-        padding-top: 50vh
-        &__plus
-            +regular
+        .upper-part
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 34px 0
+            .nav
+                &__link
+                    margin-right: 55px
+                    font-size: 14px
+                    line-height: 20px                
+            .contacts
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                &__phone
+                    font-size: 23px
+                    color: $red
+                    margin-bottom: 7px
+                &__call
+                    font-size: 13px
+                    color: $red
+                    position: relative 
+                    text-decoration: none       
+                    &::after
+                        content: ''
+                        position: absolute
+                        left: 0
+                        bottom: -2px
+                        width: 100%
+                        height: 1px
+                        background-color: $red
+        .lower-part
+            display: flex
+            flex-wrap: nowrap
+            align-items: flex-end
+            justify-content: space-between
+            .left-part
+                .text
+                    &__title
+                        white-space: nowrap
+                        font-size: 65px
+                        width: 0
+                        line-height: 70px
+                        margin-bottom: 15px
+                        +radio-black
+                    .red-text
+                        +radio-black
+                    &__subtitle
+                        max-width: 500px
+                        line-height: 26px
+                        +radio-light
+                .buttons
+                    margin-top: 45px
+                    &__button
+                        margin-right: 20px
+                .social-container
+                    margin-top: 110px
+            .right-part
+                .labtop
+                    width: 585px
+                    position: relative
+                    .all-dotes
+                        position: absolute
+                        left: 0
+                        top: 0
+                        width: 100%
+                        height: 100%
+                        .dotes
+                            position: absolute
+                            z-index: 3
+                            &:nth-child(3)
+                                right: 340px
+                                top: 135px
+                                .dot
+                                    position: absolute
+                                    right: 0
+                                    top: 0
+                            &:nth-child(2)
+                                right: 165px
+                                top: 530px
+                                .dot
+                                    position: absolute
+                                    right: 0
+                                    top: 0
+                            &:nth-child(1)
+                                right: -55px
+                                top: 180px
+                                .dot
+                                    position: absolute
+                                    right: 0
+                                    top: 0
+                    &__stripe
+                        position: absolute
+                        left: 28%
+                        top: 62%
+                        width: 550px
+                        height: 50px
+                        background-color: $red
+                        transform: rotateZ(-2deg)
+                    &__image
+                        position: relative
+                    &__screen
+                        display: none
+                    &__shadow
+                        position: absolute
+                        left: -40%
+                    &::after
+                        content: ''
+                        background-image: url('../images/header/screen_CHANGE_THIS.png')
+                        width: 405px
+                        height: 338px
+                        display: block
+                        position: absolute
+                        top: 30px
+                        right: -39px

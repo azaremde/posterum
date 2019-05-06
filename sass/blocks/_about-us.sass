@@ -1,0 +1,39 @@
+.about-us
+    margin-top: 135px
+    .container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .left-part
+            &__title
+                font-size: 30px
+            &__description
+                font-size: 18px
+                color: white
+                line-height: 25px
+                +regular
+            .squares
+                .row
+                    margin-top: 50px
+                    display: flex
+                    .square
+                        margin-right: 155px
+                        .frame
+                            white-space: nowrap
+                            width: 131px
+                            height: 131px
+                            border: 17px solid $red
+                            box-shadow: 0 0 20px rgba($red, 0.2)
+                            &__title
+                                font-size: 45px
+                                margin-left: 17px
+                                margin-top: 7px
+                                +bold
+                            &__subtitle
+                                font-size: 14px
+                                margin: 0
+                                margin-left: 20px
+                                color: #c9c9c9
+                                +light
+        .right-part
+            &__image

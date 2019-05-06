@@ -1,15 +1,103 @@
 *
+    +medium
     box-sizing: border-box
-    +regular
+    &::selection
+        background: rgba($red, 0.8)
+    Cache-Control: max-age=2592000, public
 
-h1, h2, h3, h4, h5, h6
-    margin: 0
+body
+    background-color: $main-bg
+    overflow-x: hidden
+
+.link
+    text-decoration: none
+    color: white
+    position: relative
+    &:hover
+        &::after
+            width: 100%
+            left: 0
+    &::after
+        position: absolute
+        content: ''
+        transition: 0.5s
+        width: 0
+        height: 1px
+        background-color: #fff
+        left: 50%
+        bottom: -5px
+
+.arrow
+    position: absolute
+    z-index: -1
+    &--type-1
+        transform: translateY(-50%) rotateZ(180deg)
+        left: 0
+    &--type-2
+        right: 0
+
+.button
+    background-color: $red
+    color: white
+    border: 1px solid $red
+    font-size: 14px
     text-transform: uppercase
-    +extra-bold
+    letter-spacing: 0.35px
+    padding: 23px 32px
+    transition: all 0.2s
+    cursor: pointer
+    outline: none
+    text-decoration: none
+    display: inline-block
+    position: relative
+    text-align: center
+    &::after
+        content: ''
+        position: absolute
+        transition: .3s
+        width: 0
+        bottom: -1px
+        height: 3px
+        background: #f7f7f7
+        left: 50%
+    &:hover
+        &::after
+            left: -1px
+            width: calc(100% + 2px)
 
-p
-    margin: 0
+.section
+    background-color: $secondary-bg
+    position: relative
+    z-index: 2
+    margin-top: 43px
 
+.red-text
+    color: $red
+    +radio-light
+    
 .container
     width: 1170px
     margin: auto
+
+h1, h2, h3, h4, h5, h6
+    color: white
+    margin: 0
+    +radio-light
+
+
+.social-container
+    display: flex
+    align-items: center
+    .social-link
+        margin-right: 35px       
+
+.hidden
+    opacity: 0
+    transform: translateY(50%)
+
+.visible
+    opacity: 1
+    transform: translateY(0)
+
+.toFadeIn
+    transition: all 1s ease
